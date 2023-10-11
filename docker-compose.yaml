@@ -4,8 +4,8 @@ services:
     build:
       #context: flask-app
     networks:
-      - private-net-1
-      - public-net-1
+   #   - private-net-1
+    #  - public-net-1
     depends_on:
       - mongo
   mongo:
@@ -13,11 +13,11 @@ services:
     volumes:
       - mongodata:/data/db
     networks:
-      - private-net-1
+   #   - private-net-1
 
   #nginx:
     networks:
-      - public-net-1
+    #  - public-net-1
 
     build:
    #   context: nginx
